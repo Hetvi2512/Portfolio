@@ -8,9 +8,10 @@ import React from "react";
 import { MdWork, MdSchool } from "react-icons/md";
 import { ExpereinceEducation } from "../portfolio";
 import { Grid } from "@chakra-ui/layout";
-function ExperienceEducation() {
+import "./styles.css";
+function ExperienceEducation({ colorMode }) {
   return (
-    <Grid bg="#FBD38D" justifyItems="center">
+    <Grid bg={colorMode === "dark" ? "dark" : "#9DECF9"} justifyItems="center">
       <Text fontSize="4xl">{ExpereinceEducation?.title}</Text>
       <VerticalTimeline>
         {ExpereinceEducation?.content.map((exp) => (

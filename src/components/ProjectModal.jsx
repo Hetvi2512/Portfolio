@@ -1,6 +1,5 @@
 import React from "react";
 import { Button } from "@chakra-ui/button";
-import { useDisclosure } from "@chakra-ui/hooks";
 import { ModalOverlay } from "@chakra-ui/modal";
 import { ModalHeader } from "@chakra-ui/modal";
 import { ModalBody } from "@chakra-ui/modal";
@@ -9,16 +8,10 @@ import { ModalCloseButton } from "@chakra-ui/modal";
 import { ModalContent } from "@chakra-ui/modal";
 import { Modal } from "@chakra-ui/modal";
 import { Projects } from "../portfolio";
-import { Box } from "@chakra-ui/layout";
 import { Image } from "@chakra-ui/image";
-import { Spacer } from "@chakra-ui/layout";
 import Tippy from "@tippyjs/react";
-import { IconButton } from "@chakra-ui/button";
-import { GrReactjs } from "react-icons/gr";
 import { Text } from "@chakra-ui/layout";
-import { StackDivider } from "@chakra-ui/layout";
 import { Wrap } from "@chakra-ui/layout";
-import { HStack } from "@chakra-ui/layout";
 import { WrapItem } from "@chakra-ui/layout";
 
 function ProjectModal(props) {
@@ -61,7 +54,12 @@ function ProjectModal(props) {
                 <WrapItem>
                   {technology.map((tech) => (
                     <Tippy content={tech.tech}>
-                      <Image src={tech.image} marginRight={1}></Image>
+                      <Image
+                        src={tech.image}
+                        marginRight={1}
+                        height={12}
+                        objectFit="cover"
+                      />
                     </Tippy>
                   ))}
                 </WrapItem>

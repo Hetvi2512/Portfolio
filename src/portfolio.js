@@ -8,6 +8,12 @@ import MongoDB from "./asserts/MongoDB.png";
 import PostgreSQL from "./asserts/PostgreSQL.png";
 import JWT from "./asserts/JWT.png";
 import Express from "./asserts/Express.png";
+
+export const HeaderSection = {
+  title: "Hi all I'm Hetvi",
+  description: " I am a Full Stack Web Developer working with",
+  skills: ["Javascript", 1000, "NodeJS", 1000, "ReactJS", 1000],
+};
 export const skillsSection = {
   title: "Skills",
   skills: [
@@ -129,7 +135,7 @@ export const Projects = [
     shortdescription:
       "This Chat Application was developed for study project which had features of single and group chat.",
     longDescription:
-      " It provides support to customer queries for their products/services from the subject domain experts in their respective areas. It also provides graph and report for analysis of pending and solved queries.",
+      "It consists of features for adding or removing group members or changing group name.It also uses Socket-io for real time messaging.",
     technology: [
       { tech: "ReactJS", image: ReactJS },
       { tech: "NodeJS", image: NodeJS },
@@ -146,7 +152,7 @@ export const Projects = [
     shortdescription:
       "Thi application allows user to design apparels using pre-defined themes.",
     longDescription:
-      " It provides support to customer queries for their products/services from the subject domain experts in their respective areas. It also provides graph and report for analysis of pending and solved queries.",
+      "It has some pre-defined themes and different colors you can choose from.",
     technology: [{ tech: "ReactJS", image: ReactJS }],
   },
 ];

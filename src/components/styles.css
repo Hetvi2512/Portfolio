@@ -1,0 +1,23 @@
+.vertical-timeline-element-content h2 {
+  color: #303e49;
+  font-size: large;
+  font-weight: 700;
+}
+.vertical-timeline-element-subtitle {
+  color: #303e49;
+  margin: 0;
+  font-size: medium;
+}
+.vertical-timeline-element-content p {
+  color: #303e49;
+  margin: 1em 0 0;
+  line-height: 1.6;
+  font-size: medium;
+  font-weight: 500;
+}
+.vertical-timeline-element-content .vertical-timeline-element-date {
+  float: left;
+  padding: 0.8em 0;
+  opacity: 0.7;
+  font-size: unset;
+}

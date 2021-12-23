@@ -1,10 +1,8 @@
 import { Button } from "@chakra-ui/button";
 import { Image } from "@chakra-ui/image";
 import { WrapItem } from "@chakra-ui/layout";
-import { Badge } from "@chakra-ui/layout";
 import { Spacer } from "@chakra-ui/layout";
 import { Box } from "@chakra-ui/layout";
-import { Center } from "@chakra-ui/layout";
 import { Text } from "@chakra-ui/layout";
 import { Wrap } from "@chakra-ui/layout";
 import React, { useState } from "react";
@@ -12,7 +10,7 @@ import { MdReceipt } from "react-icons/md";
 import { Projects } from "../portfolio";
 import { useDisclosure } from "@chakra-ui/hooks";
 import ProjectModal from "./ProjectModal";
-function Project() {
+function Project({ colorMode }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [id, setId] = useState();
   const handleModal = (id) => {
@@ -26,9 +24,10 @@ function Project() {
           <WrapItem>
             <Box
               w={[300, 500]}
-              borderWidth="1px"
+              borderWidth={colorMode === "dark" ? "0px" : "1px"}
               borderRadius="lg"
               height="450px"
+              bg={colorMode === "dark" ? "rgb(1, 22, 39)" : null}
             >
               <Image
                 w={[300, 500]}

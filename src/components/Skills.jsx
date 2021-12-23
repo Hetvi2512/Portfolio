@@ -1,13 +1,9 @@
 import { IconButton } from "@chakra-ui/button";
 import { HStack } from "@chakra-ui/layout";
 import { VStack } from "@chakra-ui/layout";
-import { Grid } from "@chakra-ui/layout";
-import { GridItem } from "@chakra-ui/layout";
-import { Box } from "@chakra-ui/layout";
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css"; // optional
-//import { Tippy } from "@chakra-ui/Tippy";
-import React, { useState } from "react";
+import React from "react";
 import { skillsSection } from "../portfolio";
 import { AiFillHtml5, AiFillGithub } from "react-icons/ai";
 import {
@@ -37,6 +33,7 @@ import { WrapItem } from "@chakra-ui/layout";
 import { Spacer } from "@chakra-ui/layout";
 import { Image } from "@chakra-ui/image";
 import { Button } from "@chakra-ui/button";
+import { Center } from "@chakra-ui/layout";
 function Skills() {
   const defaultOptions = {
     loop: true,
@@ -46,7 +43,7 @@ function Skills() {
       preserveAspectRatio: "xMidYMid slice",
     },
   };
-  const icon = "logos:sass";
+
   return (
     <Wrap justify="center" align="center">
       <WrapItem w={500}>
@@ -170,7 +167,11 @@ function Skills() {
           </HStack>
           <Spacer />
           {skillsSection.skills.map((skill) => {
-            return <Text key={skill}>{skill}</Text>;
+            return (
+              <Text textAlign={["center", "center"]} key={skill}>
+                {skill}
+              </Text>
+            );
           })}
         </VStack>
       </WrapItem>
